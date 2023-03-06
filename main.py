@@ -1,16 +1,19 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def avg(marks):
+    return sum(marks) / len(marks)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def grade(average):
+    if average >= 80:
+        return "A"
+    elif 60 <= average < 80:
+        return "B"
+    elif 50 <= average < 60:
+        return "C"
+    elif average < 50:
+        return "F"
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+marks = [55, 64, 75, 80, 65, 69]
+for i in marks:
+    print(f"{marks[i]} {grade(marks[i])}")
+print("Average:", avg(marks), ", Grade:", grade(avg(marks)))
